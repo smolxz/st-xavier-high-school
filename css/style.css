@@ -118,4 +118,26 @@
     text-align: center;
     padding: 15px 0;
 }
+.page {
+    padding: 50px 0;
+}
+
+.page h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page h3 {
+    margin-top: 25px;
+    color: #1f3c88;
+}
+
+.page ul, .page ol {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.nav-menu a.active {
+    text-decoration: underline;
+}
 
