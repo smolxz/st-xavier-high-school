@@ -66,17 +66,16 @@
     <h2>Notice Board</h2>
 
     <div class="notice-frame">
-      <iframe
-        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT_TpK6ovZR8af6l8MlluvaNVIGNlQYAKROkcyjJ1_AQFwd5i-7tTlIFAVoQyRo2zljfaa66HDgs5dQ/pubhtml?gid=0&single=true"
+      <iframe 
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTwf1lGGlEY5NJzs4AHSIlaTZgJasysLJdaAmpXC33i9W6ATpbNLiTRVqSjKHztN7QY6Yj35TCdVaAc/pubhtml?gid=2046722467&single=true"
         scrolling="no">
       </iframe>
     </div>
-
   </div>
 </section>
 
 <script>
-fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vT_TpK6ovZR8af6l8MlluvaNVIGNlQYAKROkcyjJ1_AQFwd5i-7tTlIFAVoQyRo2zljfaa66HDgs5dQ/pubhtml?gid=0&single=true")
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTwf1lGGlEY5NJzs4AHSIlaTZgJasysLJdaAmpXC33i9W6ATpbNLiTRVqSjKHztN7QY6Yj35TCdVaAc/pubhtml?gid=2046722467&single=true")
   .then(res => res.text())
   .then(data => {
     const rows = data.match(/<td[^>]*>(.*?)<\/td>/g);
