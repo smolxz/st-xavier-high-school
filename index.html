@@ -62,18 +62,32 @@
 
 <!-- NOTICE BOARD -->
 <section class="notice">
-    <div class="container">
-        <h2>Notice Board</h2>
-
-        <iframe 
-            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT_TpK6ovZR8af6l8MlluvaNVIGNlQYAKROkcyjJ1_AQFwd5i-7tTlIFAVoQyRo2zljfaa66HDgs5dQ/pubhtml?gid=0&single=true"
-            width="100%" 
-            height="200" 
-            frameborder="0">
-        </iframe>
-    </div>
+  <div class="container">
+    <h2>Notice Board</h2>
+    <ul id="noticeList" class="notice-list">
+      <li>Loading notices...</li>
+    </ul>
+  </div>
 </section>
 
+<script>
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vT_TpK6ovZR8af6l8MlluvaNVIGNlQYAKROkcyjJ1_AQFwd5i-7tTlIFAVoQyRo2zljfaa66HDgs5dQ/pubhtml?gid=0&single=true")
+  .then(res => res.text())
+  .then(data => {
+    const rows = data.match(/<td[^>]*>(.*?)<\/td>/g);
+    let list = document.getElementById("noticeList");
+    list.innerHTML = "";
+
+    rows.forEach(row => {
+      const text = row.replace(/<[^>]+>/g, "").trim();
+      if(text.length > 0){
+        let li = document.createElement("li");
+        li.textContent = "📢 " + text;
+        list.appendChild(li);
+      }
+    });
+  });
+</script>
 
 <!-- FOOTER -->
 <footer class="footer">
