@@ -10,14 +10,11 @@
 
 <header class="header">
   <div class="container header-inner">
-
     <div class="logo-area">
       <img src="images/logo.png" alt="School Logo" class="logo">
       <span class="school-name">St. Xavier High School, Tihidi</span>
     </div>
-
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
     <nav id="navMenu">
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
@@ -26,43 +23,70 @@
         <li><a href="academics.html">Academics</a></li>
         <li><a href="facilities.html">Facilities</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
-
   </div>
 </header>
 
+<section class="page-banner">
+    <h2>Contact Us</h2>
+</section>
+
 <section class="page">
     <div class="container">
-        <h2>Contact Us</h2>
-
-        <p>
-            For admissions and general enquiries, please contact us using
-            the details below or send us a message.
+        
+        <p style="text-align: center; margin-bottom: 40px; font-size: 18px;">
+            Have questions about admissions or academics? Reach out to us!
         </p>
 
-        <h3>School Address</h3>
-        <p>
-            St. Xavier High School<br>
-            Tihidi, Odisha
-        </p>
+        <div class="card-grid">
+            
+            <div class="card" style="text-align: center;">
+                <h3 style="font-size: 24px;">📍</h3>
+                <h3>School Address</h3>
+                <p>
+                    St. Xavier High School<br>
+                    Tihidi, Odisha
+                </p>
+            </div>
 
-        <h3>Phone</h3>
-        <p>📞 +91 XXXXXXXXXX</p>
+            <div class="card" style="text-align: center;">
+                <h3 style="font-size: 24px;">📞</h3>
+                <h3>Phone Number</h3>
+                <p>+91 XXXXXXXXXX</p>
+                <p style="font-size: 14px; color: #666;">(Mon-Sat, 9am - 4pm)</p>
+            </div>
 
-        <h3>Email</h3>
-        <p>📧 stxaviertihidi@gmail.com</p>
+            <div class="card" style="text-align: center;">
+                <h3 style="font-size: 24px;">📧</h3>
+                <h3>Email Address</h3>
+                <p>stxaviertihidi@gmail.com</p>
+            </div>
 
-        <h3>Send Us a Message</h3>
+        </div>
 
-        <form action="https://formspree.io/f/xnjayqez" method="POST" class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="text" name="phone" placeholder="Your Phone Number">
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <div style="margin-top: 60px; max-width: 700px; margin-left: auto; margin-right: auto;">
+            <h3 class="section-title">Send Us a Message</h3>
+            
+            <div class="card">
+                <form action="https://formspree.io/f/xnjayqez" method="POST" class="contact-form" style="margin-top: 0; max-width: 100%;">
+                    <label style="font-weight: bold; display: block; margin-bottom: 5px;">Full Name</label>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+
+                    <label style="font-weight: bold; display: block; margin-bottom: 5px;">Email Address</label>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+
+                    <label style="font-weight: bold; display: block; margin-bottom: 5px;">Phone Number</label>
+                    <input type="text" name="phone" placeholder="Enter your phone number">
+
+                    <label style="font-weight: bold; display: block; margin-bottom: 5px;">Your Message</label>
+                    <textarea name="message" placeholder="How can we help you?" required></textarea>
+
+                    <button type="submit" style="width: 100%; margin-top: 10px;">Send Message</button>
+                </form>
+            </div>
+        </div>
 
     </div>
 </section>
