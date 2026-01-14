@@ -264,3 +264,87 @@
     .school-name { font-size: 16px; }
     .container { width: 95%; }
 }
+
+/* --- NEW THEME UPGRADES --- */
+
+/* 1. Page Banner (Blue Header for every page) */
+.page-banner {
+    background: linear-gradient(rgba(31, 60, 136, 0.9), rgba(31, 60, 136, 0.7)), 
+                url('../images/banner.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+}
+
+.page-banner h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* 2. Section Titles (Stylish headings with underline) */
+.section-title {
+    text-align: center;
+    color: #1f3c88;
+    font-size: 28px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: #f4c430; /* Yellow Accent */
+    border-radius: 2px;
+}
+
+/* 3. Card Grid (For Academics, Facilities, etc.) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Soft shadow */
+    transition: transform 0.3s ease;
+    border-top: 5px solid #1f3c88; /* Blue top border */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Floats up when hovered */
+}
+
+.card h3 {
+    color: #1f3c88;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.card li:last-child {
+    border-bottom: none;
+}
