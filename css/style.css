@@ -33,9 +33,13 @@
     gap: 10px;
 }
 
+/* Find this part in css/style.css and replace it */
 .logo {
     width: 45px;
-    height: auto;
+    height: 45px;       /* Forces a square shape so it becomes a perfect circle */
+    object-fit: cover;  /* Ensures the image doesn't get squashed */
+    border-radius: 50%; /* Cuts the corners to make it round */
+    border: 2px solid white; /* Optional: Adds a nice white ring around it */
 }
 
 .school-name {
