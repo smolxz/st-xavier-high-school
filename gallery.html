@@ -10,14 +10,11 @@
 
 <header class="header">
   <div class="container header-inner">
-
     <div class="logo-area">
       <img src="images/logo.png" alt="School Logo" class="logo">
       <span class="school-name">St. Xavier High School, Tihidi</span>
     </div>
-
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
     <nav id="navMenu">
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
@@ -25,36 +22,62 @@
         <li><a href="admissions.html">Admissions</a></li>
         <li><a href="academics.html">Academics</a></li>
         <li><a href="facilities.html">Facilities</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-
   </div>
 </header>
 
+<section class="page-banner">
+    <h2>Our Moments</h2>
+    <p style="margin-top: 10px; font-size: 18px; opacity: 0.9;">Glimpses of life at St. Xavier's</p>
+</section>
+
 <section class="page">
     <div class="container">
-        <h2>School Gallery</h2>
-        <p>Glimpses of campus life, classrooms, and school activities.</p>
-
         <div class="gallery-grid">
-            <img src="images/gallery/img1.jpg" alt="School Image 1">
-            <img src="images/gallery/img2.jpg" alt="School Image 2">
-            <img src="images/gallery/img3.jpg" alt="School Image 3">
-            <img src="images/gallery/img4.jpg" alt="School Image 4">
-        </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/gallery/img1.jpg" alt="School Event">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/gallery/img2.jpg" alt="Classroom">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/gallery/img3.jpg" alt="Sports Day">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/gallery/img4.jpg" alt="Cultural Program">
+            </div>
+            </div>
     </div>
 </section>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-img" src="">
+</div>
 
 <footer class="footer">
     <p>© 2025 St. Xavier High School, Tihidi | All Rights Reserved</p>
 </footer>
 
 <script>
-function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("active");
-}
+    // Menu Toggle
+    function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+    }
+
+    // Lightbox Functionality
+    function openLightbox(element) {
+        const imgSrc = element.querySelector('img').src;
+        document.getElementById('lightbox-img').src = imgSrc;
+        document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
 </script>
 
 </body>
