@@ -100,12 +100,17 @@ body {
 
 /* --- HERO SECTION --- */
 .hero {
-    /* UPDATED: 
-       1. Changed the color from Blue (rgba 31, 60, 136) to Black (rgba 0, 0, 0).
-       2. Adjusted opacity to 0.5 so the image is brighter but text is still readable.
-    */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url("../images/new-hero.jpg") center/cover no-repeat;
+    /* 1. We define the image explicitly */
+    background-image: url("../images/banner.jpg");
+    
+    /* 2. Position it to cover the whole area */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    /* 3. OPTIONAL: A very light shadow so text pops (0.2 opacity) */
+    /* If you want NO filter at all, delete the line below */
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../images/banner.jpg") center/cover no-repeat;
     
     background-attachment: fixed;
     height: 500px;
