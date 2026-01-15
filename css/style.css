@@ -104,7 +104,7 @@ body {
        1. Changed the color from Blue (rgba 31, 60, 136) to Black (rgba 0, 0, 0).
        2. Adjusted opacity to 0.5 so the image is brighter but text is still readable.
     */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
                 url("../images/new-hero.jpg") center/cover no-repeat;
     
     background-attachment: fixed;
