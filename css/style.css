@@ -104,7 +104,7 @@ body {
        1. Changed the color from Blue (rgba 31, 60, 136) to Black (rgba 0, 0, 0).
        2. Adjusted opacity to 0.5 so the image is brighter but text is still readable.
     */
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
                 url("../images/new-hero.jpg") center/cover no-repeat;
     
     background-attachment: fixed;
@@ -140,12 +140,12 @@ body {
     display: inline-block;
     padding: 12px 30px;
     background: #f4c430;
-    color: black;
+    color: #1f3c88;
     text-decoration: none;
     font-weight: bold;
     border-radius: 30px;
     transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(244, 196, 48, 0.4);
 }
 
 .btn:hover {
