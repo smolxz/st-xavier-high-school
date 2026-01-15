@@ -100,10 +100,15 @@ body {
 
 /* --- HERO SECTION --- */
 .hero {
-    background: linear-gradient(rgba(31, 60, 136, 0.8), rgba(31, 60, 136, 0.6)),
-                url("../images/banner.jpg") center/cover no-repeat;
-    background-attachment: fixed; /* Parallax effect */
-    height: 500px; /* Taller hero */
+    /* UPDATED: 
+       1. Changed the color from Blue (rgba 31, 60, 136) to Black (rgba 0, 0, 0).
+       2. Adjusted opacity to 0.5 so the image is brighter but text is still readable.
+    */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("../images/new-hero.jpg") center/cover no-repeat;
+    
+    background-attachment: fixed;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
