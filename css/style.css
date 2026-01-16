@@ -109,7 +109,8 @@ body {
     /* REMOVED 'background-attachment: fixed' because it causes 
        pixelation and zooming issues on many mobile phones. */
     /* background-attachment: fixed; */
-    
+
+    background-attachment: fixed;
     height: 500px;
     display: flex;
     align-items: center;
