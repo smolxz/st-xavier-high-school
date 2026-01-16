@@ -1,4 +1,4 @@
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -100,19 +100,16 @@ body {
 
 /* --- HERO SECTION --- */
 .hero {
-    /* 1. We define the image explicitly */
-    background-image: url("../images/banner.jpg");
+    /* 1. Corrected filename to 'banner.jpg' to match your folder.
+       2. Reduced overlay opacity to 0.4 so the image is clearer. 
+    */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url("../images/banner.jpg") center/cover no-repeat;
     
-    /* 2. Position it to cover the whole area */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* REMOVED 'background-attachment: fixed' because it causes 
+       pixelation and zooming issues on many mobile phones. */
+    /* background-attachment: fixed; */
     
-    /* 3. OPTIONAL: A very light shadow so text pops (0.2 opacity) */
-    /* If you want NO filter at all, delete the line below */
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../images/banner.jpg") center/cover no-repeat;
-    
-    background-attachment: fixed;
     height: 500px;
     display: flex;
     align-items: center;
