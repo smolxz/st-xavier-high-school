@@ -75,29 +75,74 @@ body {
 }
 
 /* Mobile Menu */
+/* --- MOBILE MENU BUTTON (Strict Alignment Fix) --- */
 .menu-toggle {
     display: none;          /* Hidden on desktop */
-    background: none;
+    background: transparent;
     border: none;
     color: white;
-    font-size: 30px;        /* Good size */
+    font-size: 34px;        /* Icon size */
     cursor: pointer;
     
-    /* ALIGNMENT FIXES */
-    line-height: 1;         /* Removes extra vertical space inside the text */
-    padding: 0;             /* Removes default button padding */
-    margin: 0;              /* Removes default button margins */
-    align-self: center;     /* Forces it to sit vertically in the middle */
+    /* Reset default spacing */
+    padding: 0;
+    margin: 0;
+    line-height: 1;         
+    
+    /* Vertically center the button itself in the header */
+    align-self: center;
 }
 
+/* --- MOBILE VIEW ADJUSTMENTS --- */
 @media (max-width: 768px) {
-    .menu-toggle { display: block; }
-    .header-inner { flex-wrap: wrap; }    /* Keeps the dropdown menu on a new line */
-    #navMenu { display: none; width: 100%; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); }
-    #navMenu.active { display: block; animation: slideDown 0.3s ease; }
-    .nav-menu { flex-direction: column; gap: 0; }
-    .nav-menu a { display: block; padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
-    .hero h2 { font-size: 32px; }
+    
+    /* 1. Show button using FLEX to center the icon inside it perfectly */
+    .menu-toggle { 
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        
+        /* Fixed size ensures it's a square box */
+        width: 40px; 
+        height: 40px; 
+        
+        /* OPTIONAL: Nudge it slightly if it still looks too high/low */
+        /* transform: translateY(-2px); */ 
+    }
+
+    /* 2. Force Header Items to stay in one row (Logo left, Button right) */
+    .header-inner {
+        flex-wrap: wrap;
+    }
+
+    /* 3. Hide the menu items by default */
+    #navMenu { 
+        display: none; 
+        width: 100%; 
+        margin-top: 15px; 
+        border-top: 1px solid rgba(255,255,255,0.1); 
+    }
+
+    /* 4. Animation for opening menu */
+    #navMenu.active { 
+        display: block; 
+        animation: slideDown 0.3s ease; 
+    }
+
+    .nav-menu { 
+        flex-direction: column; 
+        gap: 0; 
+    }
+
+    .nav-menu a { 
+        display: block; 
+        padding: 15px; 
+        border-bottom: 1px solid rgba(255,255,255,0.05); 
+    }
+
+    .hero h2 { 
+        font-size: 32px; 
+    }
 }
 
 @keyframes slideDown {
