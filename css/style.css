@@ -107,7 +107,7 @@ body {
     /* 2. Force Header Items to stay in one row */
     .header-inner {
         flex-wrap: wrap;
-        padding-right: 60px;
+        padding-right: 50px;
     }
 
     /* 3. Hide the menu items by default */
