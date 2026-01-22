@@ -411,14 +411,15 @@ body {
 }
 
 /* --- HOMEPAGE POPUP BANNER --- */
+/* --- HOMEPAGE POPUP BANNER (Safe for Phone & PC) --- */
 .popup-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Dark background */
-    z-index: 9999; /* Ensures it sits on top of everything */
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -434,44 +435,56 @@ body {
 
 .popup-content {
     background: white;
-    padding: 15px;
+    padding: 20px;
+    
+    /* WIDTH: 90% for Mobile, capped at 500px for PC */
     width: 90%;
-    max-width: 500px; /* Max width for desktop */
+    max-width: 500px;
+    
+    /* HEIGHT: Never taller than 90% of the screen (Fixes PC issue) */
+    max-height: 90vh;
+    overflow-y: auto; /* Adds scrollbar if content is too big */
+    
     border-radius: 10px;
     position: relative;
     text-align: center;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    border: 5px solid #1f3c88; /* School Blue Border */
+    border: 5px solid #1f3c88;
 }
 
 .popup-content img {
     width: 100%;
     height: auto;
+    max-height: 250px; /* Keeps image size reasonable */
+    object-fit: contain;
     border-radius: 5px;
     display: block;
-    margin-bottom: 10px;
+    margin: 10px auto;
 }
 
 .popup-content h3 {
     color: #1f3c88;
     margin-bottom: 10px;
     font-size: 22px;
+    margin-top: 10px;
 }
 
+/* Close Button (Pinned inside the box) */
 .close-btn {
     position: absolute;
-    top: -15px;
-    right: -15px;
-    background: #f4c430; /* Yellow */
+    top: 10px;
+    right: 10px;
+    background: #f4c430;
     color: #1f3c88;
-    border: 2px solid white;
-    width: 35px;
-    height: 35px;
+    border: none;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
 }
 
 .close-btn:hover {
