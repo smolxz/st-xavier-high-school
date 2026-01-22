@@ -91,6 +91,11 @@ body {
 /* --- MOBILE VIEW ADJUSTMENTS --- */
 @media (max-width: 768px) {
     
+    /* 1. Prevent Text Overlap (NEW FIX) */
+    .logo-area {
+        max-width: 80%; 
+    }
+    
     /* 1. FORCE BUTTON POSITIONING (The Fix) */
     .menu-toggle { 
         display: block;      
